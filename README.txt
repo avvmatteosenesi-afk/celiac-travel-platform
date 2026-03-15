@@ -1,0 +1,1 @@
+Upload these files to the repository root, replacing the existing city pages. This adds a top Home Page button, richer descriptions, photo placeholders and review placeholders.
