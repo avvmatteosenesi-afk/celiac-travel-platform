@@ -1,129 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CTP Map</title>
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-  crossorigin=""
-/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7f8;color:#1f2937}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7f8;color:#1f2937;line-height:1.5}
 header{background:#0F766E;color:#fff;padding:18px 20px;font-weight:bold}
-.container{max-width:1000px;margin:auto;padding:24px 20px}
-.card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:18px}
+.container{max-width:1100px;margin:auto;padding:24px 20px}
+.card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
 .badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:bold}
 .green{background:#dcfce7;color:#166534}
 .yellow{background:#fef3c7;color:#92400e}
 .small{color:#6b7280;font-size:14px}
-a{color:#0F766E;text-decoration:none;font-weight:bold}
 .btn{display:inline-block;background:#0F766E;color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;margin-right:8px;margin-top:10px}
-#map{height:460px;border-radius:14px;overflow:hidden}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+a{color:#0F766E;text-decoration:none;font-weight:bold}
+h1,h2,h3{margin-top:0}
+.section-title{margin-top:28px}
+ul{padding-left:18px}
+
+#map{height:520px;border-radius:14px;overflow:hidden}
 .legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .dot{width:12px;height:12px;border-radius:50%}
-.dot.green{background:#16a34a}
-.dot.yellow{background:#f59e0b}
-</style>
-</head>
-<body>
-<header>Celiac Travel Platform</header>
-<div class="container">
-
-<div class="card">
-<h1>Map Preview</h1>
-<p>This is the first real map layer for CTP. It now uses an actual map background and starter markers for the first published cities.</p>
-<div class="legend">
-  <span><span class="dot green"></span> Dedicated GF</span>
-  <span><span class="dot yellow"></span> Verified mixed kitchen</span>
-</div>
-</div>
-
-<div class="card">
-<div id="map"></div>
-<p class="small" style="margin-top:10px">Next step: real place-by-place geocoded markers, filters and city-based exploration.</p>
-</div>
-
+.dot.green{background:#16a34a}.dot.yellow{background:#f59e0b}
+</style></head><body><header>Celiac Travel Platform</header><div class="container">
+<div class="card"><h1>Map Preview</h1><p>First real map layer for CTP with the expanded public city coverage.</p>
+<div class="legend"><span><span class="dot green"></span> Dedicated GF focus</span><span><span class="dot yellow"></span> Verified / expansion focus</span></div></div>
+<div class="card"><div id="map"></div><p class="small" style="margin-top:10px">Next step: real place-by-place geocoded markers, category filters and hospitality overlays.</p></div>
 <div class="grid">
-  <div class="card">
-    <h3>Florence</h3>
-    <p class="small">Starter places already published</p>
-    <p>Quinoa, Sgrano, Osteria dello Sgrano, Mama Eat Firenze</p>
-    <a class="btn" href="/florence.html">Open city guide</a>
-  </div>
-
-  <div class="card">
-    <h3>Rome</h3>
-    <p class="small">Starter places already published</p>
-    <p>New Food Experience, Celiachiamo</p>
-    <a class="btn" href="/rome.html">Open city guide</a>
-  </div>
-
-  <div class="card">
-    <h3>Milan</h3>
-    <p class="small">Starter places already published</p>
-    <p>Officina Zero, Via dalla Spiga</p>
-    <a class="btn" href="/milan.html">Open city guide</a>
-  </div>
-
-  <div class="card">
-    <h3>Naples</h3>
-    <p class="small">Starter places already published</p>
-    <p>Zero Zero Grano</p>
-    <a class="btn" href="/naples.html">Open city guide</a>
-  </div>
+<div class="card"><h3>Reinforced now</h3><p>Florence, Rome, Milan, Naples, Prato and Pistoia now have stronger city pages with places and hospitality records.</p></div>
+<div class="card"><h3>Added now</h3><p>Bologna and Venice are now visible as public expansion guides and will be enriched with more verified places in the next content block.</p></div>
 </div>
-
-<div class="card">
-<a href="/index.html">← Back to homepage</a>
+<div class="card"><a href="/index.html">← Back to homepage</a></div>
 </div>
-
-</div>
-
-<script
-  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-  crossorigin=""
-></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script>
-const map = L.map('map').setView([42.7, 12.6], 5.5);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
-
-const greenIcon = L.divIcon({
-  className: '',
-  html: '<div style="width:16px;height:16px;border-radius:50%;background:#16a34a;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,.25)"></div>',
-  iconSize: [16,16],
-  iconAnchor: [8,8]
-});
-
-const yellowIcon = L.divIcon({
-  className: '',
-  html: '<div style="width:16px;height:16px;border-radius:50%;background:#f59e0b;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,.25)"></div>',
-  iconSize: [16,16],
-  iconAnchor: [8,8]
-});
-
+const map = L.map('map').setView([43.0, 11.8], 6);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19, attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+const greenIcon = L.divIcon({className:'', html:'<div style="width:16px;height:16px;border-radius:50%;background:#16a34a;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,.25)"></div>', iconSize:[16,16], iconAnchor:[8,8]});
+const yellowIcon = L.divIcon({className:'', html:'<div style="width:16px;height:16px;border-radius:50%;background:#f59e0b;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,.25)"></div>', iconSize:[16,16], iconAnchor:[8,8]});
 const markers = [
-  {name:'Florence', coords:[43.7696, 11.2558], icon:greenIcon, text:'Starter city guide with dedicated GF bakery and restaurant coverage.'},
-  {name:'Rome', coords:[41.9028, 12.4964], icon:greenIcon, text:'Excellent gluten free city with broad dining options.'},
-  {name:'Milan', coords:[45.4642, 9.1900], icon:greenIcon, text:'Strong mix of bakery and urban daily-use GF options.'},
-  {name:'Naples', coords:[40.8518, 14.2681], icon:greenIcon, text:'Relevant for gluten free pizza and tourism.'},
-  {name:'Florence Verified', coords:[43.7715, 11.2486], icon:yellowIcon, text:'Example verified mixed-kitchen place.'},
-  {name:'Naples Verified', coords:[40.8485, 14.2558], icon:yellowIcon, text:'Example verified mixed-kitchen place.'}
+  {name:'Florence', coords:[43.7696, 11.2558], icon:greenIcon, text:'Reinforced starter dataset with places and hospitality.'},
+  {name:'Prato', coords:[43.8777, 11.1022], icon:greenIcon, text:'Local-value city with starter hospitality and place records.'},
+  {name:'Pistoia', coords:[43.9339, 10.9180], icon:greenIcon, text:'Strategic Tuscany city with starter records.'},
+  {name:'Rome', coords:[41.9028, 12.4964], icon:greenIcon, text:'One of the strongest GF cities in the public alpha.'},
+  {name:'Milan', coords:[45.4642, 9.1900], icon:greenIcon, text:'Strong bakery and city-use relevance.'},
+  {name:'Naples', coords:[40.8518, 14.2681], icon:greenIcon, text:'High-value city for GF pizza and tourism.'},
+  {name:'Bologna', coords:[44.4949, 11.3426], icon:yellowIcon, text:'Public expansion guide now live.'},
+  {name:'Venice', coords:[45.4408, 12.3155], icon:yellowIcon, text:'Public expansion guide now live.'}
 ];
-
-markers.forEach(m => {
-  L.marker(m.coords, {icon:m.icon}).addTo(map)
-    .bindPopup('<strong>' + m.name + '</strong><br>' + m.text);
-});
-</script>
-</body>
-</html>
+markers.forEach(m => L.marker(m.coords, {icon:m.icon}).addTo(map).bindPopup('<strong>'+m.name+'</strong><br>'+m.text));
+</script></body></html>
