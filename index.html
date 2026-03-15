@@ -1,167 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Celiac Travel Platform</title>
-
 <style>
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f5f7f8;
-color:#1f2937;
-}
-
-header{
-background:#0F766E;
-color:white;
-padding:18px 20px;
-font-weight:bold;
-}
-
-.container{
-max-width:1000px;
-margin:auto;
-padding:30px 20px;
-}
-
-.hero{
-text-align:center;
-padding:60px 20px;
-}
-
-.hero h1{
-font-size:40px;
-margin-bottom:10px;
-}
-
-.hero p{
-font-size:20px;
-opacity:0.9;
-}
-
-.buttons{
-margin-top:30px;
-}
-
-.btn{
-display:inline-block;
-background:#0F766E;
-color:white;
-padding:12px 20px;
-border-radius:10px;
-text-decoration:none;
-margin:6px;
-font-weight:bold;
-}
-
-.section{
-margin-top:40px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
-margin-top:20px;
-}
-
-.card{
-background:white;
-border-radius:14px;
-padding:20px;
-box-shadow:0 2px 8px rgba(0,0,0,0.06);
-}
-
-.footer{
-margin-top:60px;
-padding:30px;
-text-align:center;
-color:#6b7280;
-font-size:14px;
-}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7f8;color:#1f2937;line-height:1.6}
+header{background:#0F766E;color:#fff;padding:14px 20px;position:sticky;top:0;z-index:10}
+.topbar{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.topbar .brand{font-weight:bold}
+.topbar .links{display:flex;gap:10px;flex-wrap:wrap}
+.topbar a{color:#fff;text-decoration:none;font-weight:bold;background:rgba(255,255,255,.14);padding:8px 12px;border-radius:10px}
+.container{max-width:1100px;margin:auto;padding:24px 20px}
+.card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:bold}
+.green{background:#dcfce7;color:#166534}
+.yellow{background:#fef3c7;color:#92400e}
+.small{color:#6b7280;font-size:14px}
+h1,h2,h3{margin-top:0}
+a{color:#0F766E;text-decoration:none;font-weight:bold}
+.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.photo-ph{height:110px;background:linear-gradient(135deg,#d1fae5,#e2e8f0);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#475569;font-size:13px;text-align:center;padding:10px}
+.note{background:#ecfeff;border:1px solid #a5f3fc;border-radius:10px;padding:12px;margin-top:10px}
+.btn{display:inline-block;background:#0F766E;color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none}
 </style>
 </head>
-
 <body>
-
 <header>
-Celiac Travel Platform
+  <div class="topbar">
+    <div class="brand">Celiac Travel Platform</div>
+    <div class="links">
+      <a href="/index.html">EN</a>
+      <a href="/it/index.html">Italiano</a>
+    </div>
+  </div>
 </header>
-
 <div class="container">
-
-<section class="hero">
-
-<h1>The gluten free travel platform</h1>
-
-<p>Find reliable gluten free restaurants, bakeries, hotels and shops.</p>
-
-<div class="buttons">
-
-<a class="btn" href="/cities.html">Explore Cities</a>
-
-<a class="btn" href="/places.html">Browse Places</a>
-
-<a class="btn" href="/map.html">Open Map</a>
-
+  <div class="card">
+    <h1>La piattaforma di viaggio gluten free</h1>
+    <p>Trova ristoranti, bakery, hotel e negozi gluten free in modo più chiaro, utile e sicuro.</p>
+    <p><a class="btn" href="/it/cities.html">Esplora le città</a> <a class="btn" href="/it/map.html">Apri la mappa</a></p>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Prime città</h3><p>Firenze, Roma, Milano, Napoli, Prato, Pistoia, Bologna, Venezia.</p></div>
+    <div class="card"><h3>Focus CTP</h3><p>Dati strutturati, badge, mappa e in futuro foto pubbliche e review highlights.</p></div>
+  </div>
 </div>
-
-</section>
-
-<section class="section">
-
-<h2>First Cities</h2>
-
-<div class="grid">
-
-<div class="card">Florence</div>
-<div class="card">Rome</div>
-<div class="card">Milan</div>
-<div class="card">Naples</div>
-<div class="card">Bologna</div>
-<div class="card">Venice</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>What you can find on CTP</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Restaurants</h3>
-<p>Reliable gluten free dining options.</p>
-</div>
-
-<div class="card">
-<h3>Bakeries</h3>
-<p>Dedicated gluten free bakeries and pastry shops.</p>
-</div>
-
-<div class="card">
-<h3>Hotels</h3>
-<p>Hotels with gluten free breakfast options.</p>
-</div>
-
-<div class="card">
-<h3>Shops</h3>
-<p>Stores where travelers can buy gluten free food.</p>
-</div>
-
-</div>
-
-</section>
-
-<div class="footer">
-© Celiac Travel Platform
-</div>
-
-</div>
-
 </body>
 </html>

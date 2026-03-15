@@ -1,10 +1,118 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Milan</title><style>body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7f8;color:#1f2937;line-height:1.6}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milano | CTP</title>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7f8;color:#1f2937;line-height:1.6}
 header{background:#0F766E;color:#fff;padding:14px 20px;position:sticky;top:0;z-index:10}
-.topbar{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.topbar .brand{font-weight:bold}.topbar a{color:#fff;text-decoration:none;font-weight:bold;background:rgba(255,255,255,.14);padding:8px 12px;border-radius:10px}
-.container{max-width:1100px;margin:auto;padding:24px 20px}.card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:16px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}.badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:bold}
-.green{background:#dcfce7;color:#166534}.yellow{background:#fef3c7;color:#92400e}.small{color:#6b7280;font-size:14px}h1,h2,h3{margin-top:0}
-a{color:#0F766E;text-decoration:none;font-weight:bold}.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
-.photo-ph{height:120px;background:linear-gradient(135deg,#d1fae5,#e2e8f0);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#475569;font-size:13px;text-align:center;padding:10px}
-.note{background:#ecfeff;border:1px solid #a5f3fc;border-radius:10px;padding:12px;margin-top:10px}</style></head><body><header><div class="topbar"><div class="brand">Celiac Travel Platform</div><a href="/index.html">Home Page</a></div></header><div class="container"><div class="card"><h1>Milan</h1><p class="small">★★★★☆ · city guide</p><p>Milan matters because it serves both tourism and everyday city use. A strong gluten free bakery network is especially valuable here.</p></div><div class="grid"><div class="card"><h3>Published records</h3><p><strong>4</strong> starter records are currently aligned with the v3 dataset for this city.</p></div><div class="card"><h3>Next enrichment</h3><p>The next content pass will add public-source photos and sourced web review highlights for each place.</p></div></div><h2>Starter places</h2><div class="card"><span class="badge yellow">Verified mixed kitchen</span><h3 style="margin-top:10px">Mama Eat Milano</h3><p class="small">Restaurant</p><p>Useful when you need a broad menu and are not looking only for bakery or pastry stops.</p><p class="small"><strong>Address:</strong> Via Giulio Cesare Procaccini 32</p><div class="photo-strip"><div class="photo-ph">Public photo slot 1<br>Photo sourcing in progress</div><div class="photo-ph">Public photo slot 2<br>Photo sourcing in progress</div><div class="photo-ph">Public photo slot 3<br>Photo sourcing in progress</div></div><div class="note"><strong>Review section:</strong> Public web review highlights will be added after source-by-source verification.</div></div><div class="card"><span class="badge green">Dedicated GF</span><h3 style="margin-top:10px">Officina Zero</h3><p class="small">Bakery</p><p>This is exactly the kind of urban bakery reference that makes a city feel practically manageable.</p><p class="small"><strong>Address:</strong> Via Thaon di Revel 3</p><div class="photo-strip"><div class="photo-ph">Public photo slot 1<br>Photo sourcing in progress</div><div class="photo-ph">Public photo slot 2<br>Photo sourcing in progress</div><div class="photo-ph">Public photo slot 3<br>Photo sourcing in progress</div></div><div class="note"><strong>Review section:</strong> Public web review highlights will be added after source-by-source verification.</div></div><div class="card"><span class="badge green">Dedicated GF</span><h3 style="margin-top:10px">Via dalla Spiga</h3><p class="small">Bakery</p><p>Strong value for pastry, breakfast and elegant city-center gluten free planning.</p><p class="small"><strong>Address:</strong> Via della Spiga 52</p><div class="photo-strip"><div class="photo-ph">Public photo slot 1<br>Photo sourcing in progress</div><div class="photo-ph">Public photo slot 2<br>Photo sourcing in progress</div><div class="photo-ph">Public photo slot 3<br>Photo sourcing in progress</div></div><div class="note"><strong>Review section:</strong> Public web review highlights will be added after source-by-source verification.</div></div><div class="card"><span class="badge yellow">Verified mixed kitchen</span><h3 style="margin-top:10px">Be Bop Milano GF</h3><p class="small">Pizza</p><p>Helps diversify Milan beyond bakery-only relevance and gives the city a more complete dining profile.</p><p class="small"><strong>Address:</strong> Viale Col di Lana 4</p><div class="photo-strip"><div class="photo-ph">Public photo slot 1<br>Photo sourcing in progress</div><div class="photo-ph">Public photo slot 2<br>Photo sourcing in progress</div><div class="photo-ph">Public photo slot 3<br>Photo sourcing in progress</div></div><div class="note"><strong>Review section:</strong> Public web review highlights will be added after source-by-source verification.</div></div><div class="card"><a href="/cities.html">← Back to cities</a></div></div></body></html>
+.topbar{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.topbar .brand{font-weight:bold}
+.topbar .links{display:flex;gap:10px;flex-wrap:wrap}
+.topbar a{color:#fff;text-decoration:none;font-weight:bold;background:rgba(255,255,255,.14);padding:8px 12px;border-radius:10px}
+.container{max-width:1100px;margin:auto;padding:24px 20px}
+.card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:bold}
+.green{background:#dcfce7;color:#166534}
+.yellow{background:#fef3c7;color:#92400e}
+.small{color:#6b7280;font-size:14px}
+h1,h2,h3{margin-top:0}
+a{color:#0F766E;text-decoration:none;font-weight:bold}
+.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.photo-ph{height:110px;background:linear-gradient(135deg,#d1fae5,#e2e8f0);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#475569;font-size:13px;text-align:center;padding:10px}
+.note{background:#ecfeff;border:1px solid #a5f3fc;border-radius:10px;padding:12px;margin-top:10px}
+.btn{display:inline-block;background:#0F766E;color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="topbar">
+    <div class="brand">Celiac Travel Platform</div>
+    <div class="links">
+      <a href="/index.html">Home Page</a>
+      <a href="/milan.html">EN</a>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div class="card">
+    <h1>Milano</h1>
+    <p class="small">★★★★☆ · guida città</p>
+    <p>Milano è strategica sia per il viaggio sia per l’uso urbano quotidiano. Qui una rete forte di bakery senza glutine conta moltissimo.</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Locali pubblicati</h3>
+      <p><strong>4</strong> record starter attualmente allineati al dataset v3 per questa città.</p>
+    </div>
+    <div class="card">
+      <h3>Prossimo arricchimento</h3>
+      <p>Nel prossimo passaggio verranno aggiunte foto pubbliche realmente sourced e sintesi di recensioni web attribuite.</p>
+    </div>
+  </div>
+  <h2>Locali starter</h2>
+  
+        <div class="card">
+          <span class="badge yellow">Cucina mista verificata</span>
+          <h3 style="margin-top:10px">Mama Eat Milano</h3>
+          <p class="small">Ristorante</p>
+          <p>Utile quando vuoi un menù ampio e non stai cercando solo bakery o pasticceria.</p>
+          <p class="small"><strong>Indirizzo:</strong> Via Giulio Cesare Procaccini 32</p>
+          <div class="photo-strip">
+            <div class="photo-ph">Foto pubblica 1<br>in sourcing</div>
+            <div class="photo-ph">Foto pubblica 2<br>in sourcing</div>
+            <div class="photo-ph">Foto pubblica 3<br>in sourcing</div>
+          </div>
+          <div class="note"><strong>Recensioni utenti:</strong> sezione pronta per inserire sintesi da fonti web pubbliche e attribuite.</div>
+        </div>
+        
+        <div class="card">
+          <span class="badge green">Gluten free dedicato</span>
+          <h3 style="margin-top:10px">Officina Zero</h3>
+          <p class="small">Bakery</p>
+          <p>È esattamente il tipo di riferimento urbano che fa percepire una città come davvero gestibile.</p>
+          <p class="small"><strong>Indirizzo:</strong> Via Thaon di Revel 3</p>
+          <div class="photo-strip">
+            <div class="photo-ph">Foto pubblica 1<br>in sourcing</div>
+            <div class="photo-ph">Foto pubblica 2<br>in sourcing</div>
+            <div class="photo-ph">Foto pubblica 3<br>in sourcing</div>
+          </div>
+          <div class="note"><strong>Recensioni utenti:</strong> sezione pronta per inserire sintesi da fonti web pubbliche e attribuite.</div>
+        </div>
+        
+        <div class="card">
+          <span class="badge green">Gluten free dedicato</span>
+          <h3 style="margin-top:10px">Via dalla Spiga</h3>
+          <p class="small">Bakery</p>
+          <p>Molto interessante per pasticceria, colazione e pianificazione in centro.</p>
+          <p class="small"><strong>Indirizzo:</strong> Via della Spiga 52</p>
+          <div class="photo-strip">
+            <div class="photo-ph">Foto pubblica 1<br>in sourcing</div>
+            <div class="photo-ph">Foto pubblica 2<br>in sourcing</div>
+            <div class="photo-ph">Foto pubblica 3<br>in sourcing</div>
+          </div>
+          <div class="note"><strong>Recensioni utenti:</strong> sezione pronta per inserire sintesi da fonti web pubbliche e attribuite.</div>
+        </div>
+        
+        <div class="card">
+          <span class="badge yellow">Cucina mista verificata</span>
+          <h3 style="margin-top:10px">Be Bop Milano GF</h3>
+          <p class="small">Pizza</p>
+          <p>Aiuta Milano a non essere solo una città di bakery, ma anche una città di ristorazione utile.</p>
+          <p class="small"><strong>Indirizzo:</strong> Viale Col di Lana 4</p>
+          <div class="photo-strip">
+            <div class="photo-ph">Foto pubblica 1<br>in sourcing</div>
+            <div class="photo-ph">Foto pubblica 2<br>in sourcing</div>
+            <div class="photo-ph">Foto pubblica 3<br>in sourcing</div>
+          </div>
+          <div class="note"><strong>Recensioni utenti:</strong> sezione pronta per inserire sintesi da fonti web pubbliche e attribuite.</div>
+        </div>
+        
+  <div class="card">
+    <a href="/it/cities.html">← Torna alle città</a>
+  </div>
+</div>
+</body>
+</html>
